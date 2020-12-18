@@ -5,6 +5,7 @@ import { initialState, reducer } from './reducers/reducer'
 import TodoForm from './components/TodoForm'
 import TodoList from './components/TodoList';
 
+
 function App() {
   const [newTodo, setNewTodo] = useState('')
 
@@ -31,7 +32,7 @@ function App() {
     <div className="App">
       <h1>Hello World</h1>
       <TodoForm newTodo={newTodo} dispatch={dispatch} handleChanges={handleChanges} handleSubmit={handleSubmit}/>
-      <TodoList toggleTodo={toggleTodo} clearCompleted={clearCompleted}/>
+      <TodoList state={state} toggleTodo={toggleTodo} clearCompleted={clearCompleted}/>
     </div>
   );
 }
